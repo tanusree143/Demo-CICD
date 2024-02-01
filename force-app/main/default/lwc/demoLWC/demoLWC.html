@@ -1,0 +1,13 @@
+<template>
+  <lightning-card title =" Account Data">
+  <lightning-input label = "Account Name" value ={Name} onchange ={changeAccountName} ></lightning-input> 
+  <lightning-button label ="GetDetails" onclick ={getAccountDetails}></lightning-button>
+  <!-- create account record details card-->
+  <template if:true={accountData}>
+  <p>{accountData.Name}</p>
+  <p>{accountData.Phone}</p>
+ 
+  <p>{accountData.Industry}</p>
+</template>
+</lightning-card>
+</template>

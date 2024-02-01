@@ -1,0 +1,11 @@
+<template>
+    <div class="container">
+        <lightning-card title={summaryTitle} icon-name={summaryIcon}>
+            <div class="slds-m-around_medium">
+                <template for:each={summaryDetails} for:item="detail">
+                    <p key={detail.field}>{detail.field}: {detail.value}</p>
+                </template>
+            </div>
+        </lightning-card>
+    </div>
+</template>

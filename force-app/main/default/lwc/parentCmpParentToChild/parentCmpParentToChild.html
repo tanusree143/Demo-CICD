@@ -1,0 +1,9 @@
+<template>
+ <lightning-card title="Parent Component">
+    <lightning-input label ="enter message" onchange={handleMessage}></lightning-input>
+    <lightning-button label = "Submit" onclick ={sendMessage}></lightning-button>
+ </lightning-card>   
+ <lightning-card title = "Child Component">
+    <c-child-cmp-parent-to-child></c-child-cmp-parent-to-child>
+ </lightning-card>
+</template>

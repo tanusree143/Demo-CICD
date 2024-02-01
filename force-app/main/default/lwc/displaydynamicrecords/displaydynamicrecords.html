@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Record Details" icon-name="standard:record">
+        <div class="slds-p-around_medium">
+            <template if:true={record}>
+                <!-- Display record details -->
+                <lightning-record-view-form record-id={recordId} object-api-name={objectApiName}
+                                            onload={handleLoad} onerror={handleError}>
+                    <template if:true={objectFields}>
+                        <template for:each={objectFields} for:item="field">
+                            <lightning-output-field key={field.fieldApiName}
+                                                    field-name={field.fieldApiName}>
+                            </lightning-output-field>
+                        </template>
+                    </template>
+                </lightning-record-view-form>
+            </template>
+            <template if:true={error}>
+                <!-- Handle error if any -->
+                {error}
+            </template>
+        </div>
+    </lightning-card>
+</template>

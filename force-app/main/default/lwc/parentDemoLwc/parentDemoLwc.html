@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Parent Component to send AccountName to Child">
+        <lightning-input label ="Enter Account Name" value ={inputValue} onchange={handlechange}>
+       </lightning-input>
+       <lightning-button label ="Submit" onclick ={getContacttDetails}></lightning-button>
+    </lightning-card>
+    <lightning-card title ="Child component to disply contact details" >
+    <c-child-demo-lwc  contact_data ={contactDetails}></c-child-demo-lwc>
+          
+    </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title ='Contact Record Details' >
+        <lightning-input label="Enter Contact LastName" name ='name' onchange={changeName}> </lightning-input>  
+            <lightning-button label = 'Submit' onclick={getContactDetails}></lightning-button>
+            <template if:true ={contactData}>
+                <p>{contactData.FirstName}</p>
+                <p>{contactData.LastName}</p>
+                <p>{contactData.Email}</p>
+                <p>{contactData.Phone}</p>
+                <p>{contactData.AccountId}</p>
+
+            </template>
+       
+
+    </lightning-card>
+
+</template>
